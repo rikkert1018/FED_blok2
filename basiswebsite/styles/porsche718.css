@@ -1,0 +1,164 @@
+/* Headings */
+
+:root {
+	--heading-2-font-size: 1.5em;
+	--heading-2-padding: 1em 0em 0em 1em;
+  
+	--heading-3-font-size: 2.5em;
+	--heading-3-font-weight: bold;
+	--heading-3-margin: 0;
+	--heading-3-color: #ffffff;
+	--heading-3-margin: 1em 1.5em 0em 0.6em;
+  
+	--heading-4-font-size: 1em;
+	--heading-4-margin: 0.6em 0.6em 0.6em 0.6em;
+  }
+  
+  
+  h2 {
+	font-size: var(--heading-2-font-size);
+	padding: var(--heading-2-padding);
+  }
+  
+  h3 {
+	font-size: var(--heading-3-font-size);
+	font-weight: var(--heading-3-font-weight);
+	margin: var(--heading-3-margin);
+	color: var(--heading-3-color);
+  }
+  
+  h4 {
+	font-size: var(--heading-4-font-size);
+	margin: var(--heading-4-margin);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Navigation bar */
+  :root {
+	--background-color:black; 
+	--text-color:white; 
+  }
+  
+  
+  header {
+	display: flex;
+	justify-content: space-between;
+	top: 0;
+	width: 100%;
+	background-color: var(--primary-color);
+	z-index: 999;
+	margin: 0em 0em 0em 0em;
+	padding: 1em 2em 1em 2em;
+  }
+  
+  header nav {
+	display: flex;
+	height: 3.7em;
+	margin: 0em 0em 0em 0em;
+	padding: 0em 0em 1em 0em;
+	float: none;
+	position: absolute;
+	top: 2.5em;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+  }
+  
+  header nav a img {
+	width: 4em;
+	height: auto;
+	border: white;
+	margin: 1em 0em 0em 0em;
+	flex: 1;
+  }
+  
+  header div img {
+	display: flex;
+	height: 2em;
+	right: 0;
+  }
+  
+  
+  
+  
+  /* menu items */
+  .overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+	background-color: var(--background-color);
+  }
+  
+  .overlay-content {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin-top: 2.5em;
+  }
+  
+  .overlay a {
+	text-decoration: none;
+	text-align: left;
+	font-size: 1.5em;
+	color: var(--text-color);
+	display: block;
+	transition: 0.3s;
+	margin: 1em 0;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	background-color: var(--primary-color);
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+	background-color: var(--secondary-color);
+  }
+  
+  .overlay .closebtn {
+	position: absolute;
+	right: 0.5em;
+	font-size: 2.3em;
+	margin: 0em;
+	padding: 0.1em 0.1em 0em 0.1em;
+	border-radius: 0.1em;
+  }
+  
+  .menu-button {
+	font-size: 1.2em;
+	cursor: pointer;
+	color: #7e7e7e;
+  }
+  
+  /* Apply color mode styles to the menu */
+  :root:has([value="dark"]:checked) .overlay {
+	background-color: var(--colour-mode-dark-background);
+  }
+  
+  :root:has([value="dark"]:checked) .overlay a {
+	color: var(--colour-mode-dark-text);
+  }
+  
+  :root:has([value="light"]:checked) .overlay {
+	background-color: var(--colour-mode-light-background);
+  }
+  
+  :root:has([value="light"]:checked) .overlay a {
+	color: var(--colour-mode-light-text);
+  }
+  

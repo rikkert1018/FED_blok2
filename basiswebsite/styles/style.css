@@ -1,0 +1,560 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button,
+summary {
+  cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
+
+/* General */
+
+img {
+  width: 100%;
+  right: 0;
+  left: 0;
+  display: block;
+}
+
+svg {
+  width: 2em;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+li,
+span,
+label {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+a:hover {
+  color: #d5001c;
+  transition: 0.2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+/* Headings */
+
+:root {
+  --heading-2-font-size: 1.5em;
+  --heading-2-padding: 1em 0em 0em 1em;
+
+  --heading-3-font-size: 2.5em;
+  --heading-3-font-weight: bold;
+  --heading-3-margin: 0;
+  --heading-3-color: #ffffff;
+  --heading-3-margin: 1em 1.5em 0em 0.6em;
+
+  --heading-4-font-size: 1em;
+  --heading-4-margin: 0.6em 0.6em 0.6em 0.6em;
+}
+
+
+h2 {
+  font-size: var(--heading-2-font-size);
+  padding: var(--heading-2-padding);
+}
+
+h3 {
+  font-size: var(--heading-3-font-size);
+  font-weight: var(--heading-3-font-weight);
+  margin: var(--heading-3-margin);
+  color: var(--heading-3-color);
+}
+
+h4 {
+  font-size: var(--heading-4-font-size);
+  margin: var(--heading-4-margin);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navigation bar */
+:root {
+  --background-color:black; 
+  --text-color:white; 
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: 999;
+  margin: 0em 0em 0em 0em;
+  padding: 1em 2em 1em 2em;
+}
+
+header nav {
+  display: flex;
+  height: 3.7em;
+  margin: 0em 0em 0em 0em;
+  padding: 0em 0em 1em 0em;
+  float: none;
+  position: absolute;
+  top: 2.5em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+
+header nav a img {
+  width: 4em;
+  height: auto;
+  border: white;
+  margin: 1em 0em 0em 0em;
+  flex: 1;
+}
+
+header div img {
+  display: flex;
+  height: 2em;
+  right: 0;
+}
+
+
+
+
+/* menu items */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-color: var(--background-color);
+}
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 2.5em;
+}
+
+.overlay a {
+  text-decoration: none;
+  text-align: left;
+  font-size: 1.5em;
+  color: var(--text-color);
+  display: block;
+  transition: 0.3s;
+  margin: 1em 0;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  background-color: var(--primary-color);
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  background-color: var(--secondary-color);
+}
+
+.overlay .closebtn {
+  position: absolute;
+  right: 0.5em;
+  font-size: 2.3em;
+  margin: 0em;
+  padding: 0.1em 0.1em 0em 0.1em;
+  border-radius: 0.1em;
+}
+
+.menu-button {
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #7e7e7e;
+}
+
+/* Apply color mode styles to the menu */
+:root:has([value="dark"]:checked) .overlay {
+  background-color: var(--colour-mode-dark-background);
+}
+
+:root:has([value="dark"]:checked) .overlay a {
+  color: var(--colour-mode-dark-text);
+}
+
+:root:has([value="light"]:checked) .overlay {
+  background-color: var(--colour-mode-light-background);
+}
+
+:root:has([value="light"]:checked) .overlay a {
+  color: var(--colour-mode-light-text);
+}
+
+
+
+
+
+
+
+
+
+
+/* colormode */
+
+:root {
+  --bg-light: white;
+  --bg-dark: black;
+  --colour-mode-light-background: white;
+  --colour-mode-light-text: black;
+  --colour-mode-dark-background: black;
+  --colour-mode-dark-text: white;
+}
+
+body {
+  background-color: var(--bg-root);
+  color: var(--clr-root);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark);
+    color: white;
+    /* Aangepaste tekstkleur voor dark mode */
+  }
+}
+
+:root:has([value="dark"]:checked) body {
+  background-color: var(--bg-dark);
+  color: white;
+  /* Aangepaste tekstkleur voor dark mode */
+}
+
+:root:has([value="light"]:checked) body {
+  background-color: var(--bg-light);
+  color: var(--clr-root);
+}
+
+.colour-mode {
+  z-index: 999;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  bottom: 1em;
+  left: 1em;
+padding: 0em 0em 0em 0em;
+  border: 1px solid; /* Voeg een border toe om zichtbaar te zijn */
+}
+
+
+:root:has([value="dark"]:checked) .colour-mode {
+  background-color: var(--colour-mode-dark-background);
+  color: var(--colour-mode-dark-text);
+}
+
+:root:has([value="light"]:checked) .colour-mode {
+  background-color: var(--colour-mode-light-background);
+  color: var(--colour-mode-light-text);
+}
+
+
+
+
+
+
+
+/* footer */
+
+body.dark-mode footer>section:last-of-type {
+  background-color: var(--footer-background-dark);
+  color: var(--footer-text-color-dark);
+}
+
+body.dark-mode footer nav a {
+  color: var(--footer-link-color-dark);
+}
+
+body.dark-mode footer section ul button {
+  background-color: var(--button-background-dark);
+  color: var(--button-text-color-dark);
+}
+
+
+:root {
+  --footer-border-color: #000;
+  --footer-background: #191f22;
+  --footer-text-color: #fff;
+  --footer-link-color: #000;
+  --footer-link-hover-color: #f2f2f2;
+  --button-background: rgb(43, 43, 43);
+  --button-text-color: #fff;
+  --button-hover-color: #f2f2f2;
+}
+
+footer h2 {
+  font-size: 1.5em;
+}
+
+footer nav li:first-child {
+  border-top: 2px solid var(--footer-border-color);
+}
+
+footer nav li:last-child {
+  border-bottom: 2px solid var(--footer-border-color);
+}
+
+footer nav {
+  display: flex;
+  padding: 1em;
+  padding-top: 5em;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+footer ul {
+  padding-inline-start: 0;
+  padding-left: 1em;
+  margin-right: 2em;
+}
+
+footer nav li {
+  border-top: 1px solid var(--footer-border-color);
+  border-bottom: 1px solid var(--footer-border-color);
+}
+
+.footer-list {
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+
+}
+
+footer p a {
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+  border-top: 1px solid var(--footer-border-color); /* Lijn boven de eerste link */
+}
+
+footer p a:visited {
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+  color: var(--colour-mode-dark-text);
+  border-top: 1px solid var(--footer-border-color); /* Lijn boven de eerste link */
+}
+
+
+
+/* Lijn en extra padding toevoegen aan alle links behalve de laatste */
+footer p a:not(:last-child) {
+  border-bottom: 1sem solid var(--footer-border-color); /* Lijn tussen links */
+  padding-right: 1em; /* Extra padding aan de rechterkant (optioneel) */
+}
+
+/* Lijn onder de laatste link */
+footer p a:last-child {
+  border-bottom: 1px solid var(--footer-border-color);
+}
+
+
+footer section ul:last-child li {
+  background-color: var(--footer-link-hover-color);
+}
+
+footer p {
+  padding-left: 1em;
+}
+
+footer>section:last-of-type {
+  margin: 0;
+  padding: var(--padding);
+  padding-top: 2em;
+  padding-bottom: 5em;
+  background-color: var(--footer-background);
+  color: var(--footer-text-color);
+}
+
+footer>section:last-of-type a {
+  color: var(--footer-text-color);
+  padding: 0;
+  text-decoration: underline;
+}
+
+/* Nieuwe CSS voor de buttons in de footer */
+footer section ul button {
+  background-color: var(--button-background);
+  padding: 1em;
+  margin: 0.5em;
+  border: none;
+}
+
+footer section ul button a {
+  text-decoration: none;
+  color: var(--button-text-color);
+  display: block;
+  margin: 0;
+  padding-left: 0.5em;
+}
+
+
+
+
+
+
+/* color mode */
+/* Voeg deze regels toe aan het einde van je CSS */
+
+:root:has([value="dark"]:checked) footer>section:last-of-type {
+  background-color: var(--footer-background-dark);
+  color: var(--footer-text-color-dark);
+}
+
+:root:has([value="dark"]:checked) footer nav a {
+  color: var(--footer-link-color-dark);
+}
+
+:root:has([value="dark"]:checked) footer section ul button {
+  background-color: var(--button-background-dark);
+  color: var(--button-text-color-dark);
+}
+
+:root:has([value="light"]:checked) footer>section:last-of-type {
+  background-color: var(--footer-background);
+  color: var(--footer-text-color);
+}
+
+:root:has([value="light"]:checked) footer nav a {
+  color: var(--footer-link-color);
+}
+
+:root:has([value="light"]:checked) footer section ul button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+}
+
+/* colormode */
+
+:root {
+  --bg-light: white;
+  --bg-dark: black;
+  --colour-mode-light-background: white;
+  --colour-mode-light-text: black;
+  --colour-mode-dark-background: black;
+  --colour-mode-dark-text: white;
+}
+
+body {
+  background-color: var(--bg-root);
+  color: var(--clr-root);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark);
+    color: white;
+    /* Aangepaste tekstkleur voor dark mode */
+  }
+}
+
+:root:has([value="dark"]:checked) body {
+  background-color: var(--bg-dark);
+  color: white;
+  /* Aangepaste tekstkleur voor dark mode */
+}
+
+:root:has([value="light"]:checked) body {
+  background-color: var(--bg-light);
+  color: var(--clr-root);
+}
+
+.colour-mode {
+  z-index: 999;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  bottom: 1em;
+  left: 1em;
+padding: 0em 0em 0em 0em;
+  border: 1px solid; /* Voeg een border toe om zichtbaar te zijn */
+}
+
+
+:root:has([value="dark"]:checked) .colour-mode {
+  background-color: var(--colour-mode-dark-background);
+  color: var(--colour-mode-dark-text);
+}
+
+:root:has([value="light"]:checked) .colour-mode {
+  background-color: var(--colour-mode-light-background);
+  color: var(--colour-mode-light-text);
+}
+
+
+
+
+
+
