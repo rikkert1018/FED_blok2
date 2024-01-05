@@ -92,73 +92,93 @@
   
   
   
-  /* menu items */
-  .overlay {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	overflow-x: hidden;
-	transition: 0.5s;
-	background-color: var(--background-color);
+/* Models 718 */
+:root {
+    --main-text-color: #ffffff;
+    --link-color: #ffffff;
+    --link-hover-color: #d5001c;
+    --link-border-color: #ffffff;
+    --link-hover-border-color: #d5001c;
+    --background-color: #000;
+  }
+  .models {
+	margin-bottom: 2em;
+  }
+ 
+ 
+  .models ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
   
-  .overlay-content {
-	position: relative;
-	width: 100%;
-	text-align: center;
-	margin-top: 2.5em;
+  .models ul li {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    font-size: 1.2rem;
   }
   
-  .overlay a {
-	text-decoration: none;
-	text-align: left;
-	font-size: 1.5em;
-	color: var(--text-color);
-	display: block;
-	transition: 0.3s;
-	margin: 1em 0;
-	padding: 0.5em;
-	border-radius: 0.3em;
-	background-color: var(--primary-color);
+  .models ul li a {
+    display: block;
+    margin: 0;
   }
   
-  .overlay a:hover,
-  .overlay a:focus {
-	background-color: var(--secondary-color);
+  .models ul li section:nth-of-type(2) {
+    align-self: flex-end;
   }
   
-  .overlay .closebtn {
-	position: absolute;
-	right: 0.5em;
-	font-size: 2.3em;
-	margin: 0em;
-	padding: 0.1em 0.1em 0em 0.1em;
-	border-radius: 0.1em;
+  .models ul li h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--main-text-color);
+    position: absolute;
+    bottom: 0.5em;
+    left: 0.5em;
+    transition: color 0.2s ease-in-out;
   }
   
-  .menu-button {
-	font-size: 1.2em;
-	cursor: pointer;
-	color: #7e7e7e;
+  
+  .models ul li p {
+    font-size: 0.8em;
+    color: var(--clr-p);
+	margin: 0;
+	
   }
   
-  /* Apply color mode styles to the menu */
-  :root:has([value="dark"]:checked) .overlay {
-	background-color: var(--colour-mode-dark-background);
+  
+  .models ul li a:first-of-type {
+    color: var(--background-color);
+    background-color: var(--link-color);
   }
   
-  :root:has([value="dark"]:checked) .overlay a {
-	color: var(--colour-mode-dark-text);
+  .models ul li a:first-of-type:hover {
+    background-color: var(--link-hover-color);
+    color: var(--background-color);
+    border-color: var(--link-hover-border-color);
   }
   
-  :root:has([value="light"]:checked) .overlay {
-	background-color: var(--colour-mode-light-background);
+  .models ul li a:nth-of-type(2):hover {
+    color: var(--link-hover-color);
+    border-color: var(--link-hover-border-color);
   }
   
-  :root:has([value="light"]:checked) .overlay a {
-	color: var(--colour-mode-light-text);
+  .models ul li h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    color: var(--main-text-color);
+    transition: color 0.2s ease-in-out;
+  
   }
   
+  .models ul li h3:hover {
+    color: var(--link-hover-color);
+  }
+  
+

@@ -9,36 +9,47 @@
     <title>Home | Porsche Nederland</title>
 
     <link href="styles/style.css" rel= stylesheet>
+    <link href="styles/porsche718.css" rel= stylesheet>
     <link rel="icon" type="image/favicon" href="images/favicon.ico">
 
 </head>
 
 <body>
-
-	<header>
-		<div id="myNav" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<div class="overlay-content">
-				<a href="#">Modellen</a>
-				<a href="#">Advies & aankoop</a>
-				<a href="#">Shop</a>
-				<a href="#">Services</a>
-				<a href="#">Beleven</a>
-				<a href="#">Dealer</a>
-				<a href="#">My Porsche</a>
-
-			</div>
-		</div>
-		<span class="menu-button" onclick="openNav()">&#9776; </span>
-		<nav>
-			<a href="index.html">
-				<img src="images/porsche-logo.png" alt="Porsche logo">
-			</a>
-		</nav>
-		<div>
-			<img src="images/SVG/account-avatar-man-svgrepo-com.svg">
-		</div>
-	</header>
+    <header>
+        <section id="myNav" class="overlay">
+            <a href="#" class="closebtn" id="closeBtn">&times;</a>
+            <section class="overlay-content">
+                <a href="#">Modellen</a>
+                <a href="#">Advies & aankoop</a>
+                <a href="#">Shop</a>
+                <a href="#">Services</a>
+                <a href="#">Beleven</a>
+                <a href="#">Dealer</a>
+                <a href="#">My Porsche</a>
+                <section class="colour-mode-button">
+                    <p>Toggle color mode</p>
+                    <label>
+                        <input type="radio" value="dark" name="color-scheme"> dark
+                    </label>
+                    <label>
+                        <input type="radio" value="light" name="color-scheme"> light
+                    </label>
+                    <label>
+                        <input type="radio" value="system" name="color-scheme" checked> system
+                    </label>
+                </section>
+            </section>
+        </section>
+        <span class="menu-button" id="menuBtn">&#9776;</span>
+        <nav>
+            <a href="#">
+                <img src="images/porsche-logo.png" alt="Porsche logo">
+            </a>
+        </nav>
+        <section>
+            <img src="images/SVG/account-avatar-man-svgrepo-com.svg">
+        </section>
+    </header>
 
     <main>
 

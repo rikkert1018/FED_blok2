@@ -1,6 +1,5 @@
 
 
-
 function initializePage() {
     const carouselContainer = document.getElementById('carousel-container');
     const carousel = document.getElementById('carousel');
@@ -35,8 +34,7 @@ function initializePage() {
     }
 }
 
-
-
+document.addEventListener('DOMContentLoaded', initializePage);
 
 
 

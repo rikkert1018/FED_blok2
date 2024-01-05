@@ -50,17 +50,7 @@ svg {
   width: 2em;
 }
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-a,
-li,
-span,
-label {
+body{
   font-family: 'Roboto', sans-serif;
 }
 
@@ -85,6 +75,8 @@ a:hover {
 /* Headings */
 
 :root {
+  
+  --heading-1-font-size:2em; 
   --heading-2-font-size: 1.5em;
   --heading-2-padding: 1em 0em 0em 1em;
 
@@ -98,6 +90,9 @@ a:hover {
   --heading-4-margin: 0.6em 0.6em 0.6em 0.6em;
 }
 
+h1 {
+  font-size: var(--heading-1-font-size);
+}
 
 h2 {
   font-size: var(--heading-2-font-size);
@@ -130,8 +125,8 @@ h4 {
 
 /* Navigation bar */
 :root {
-  --background-color:black; 
-  --text-color:white; 
+  --background-color: black;
+  --text-color: white;
 }
 
 
@@ -167,7 +162,7 @@ header nav a img {
   flex: 1;
 }
 
-header div img {
+header img {
   display: flex;
   height: 2em;
   right: 0;
@@ -257,60 +252,6 @@ header div img {
 
 /* colormode */
 
-:root {
-  --bg-light: white;
-  --bg-dark: black;
-  --colour-mode-light-background: white;
-  --colour-mode-light-text: black;
-  --colour-mode-dark-background: black;
-  --colour-mode-dark-text: white;
-}
-
-body {
-  background-color: var(--bg-root);
-  color: var(--clr-root);
-  transition: background-color 0.5s, color 0.5s;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--bg-dark);
-    color: white;
-    /* Aangepaste tekstkleur voor dark mode */
-  }
-}
-
-:root:has([value="dark"]:checked) body {
-  background-color: var(--bg-dark);
-  color: white;
-  /* Aangepaste tekstkleur voor dark mode */
-}
-
-:root:has([value="light"]:checked) body {
-  background-color: var(--bg-light);
-  color: var(--clr-root);
-}
-
-.colour-mode {
-  z-index: 999;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  bottom: 1em;
-  left: 1em;
-padding: 0em 0em 0em 0em;
-  border: 1px solid; /* Voeg een border toe om zichtbaar te zijn */
-}
-
-
-:root:has([value="dark"]:checked) .colour-mode {
-  background-color: var(--colour-mode-dark-background);
-  color: var(--colour-mode-dark-text);
-}
-
-:root:has([value="light"]:checked) .colour-mode {
-  background-color: var(--colour-mode-light-background);
-  color: var(--colour-mode-light-text);
-}
 
 
 
@@ -345,6 +286,8 @@ body.dark-mode footer section ul button {
   --button-text-color: #fff;
   --button-hover-color: #f2f2f2;
 }
+
+
 
 footer h2 {
   font-size: 1.5em;
@@ -395,24 +338,25 @@ footer p a {
   text-decoration: none;
   display: block;
   margin: 0;
-  border-top: 1px solid var(--footer-border-color); /* Lijn boven de eerste link */
+  border-top: 1px solid var(--clr-border-a);
+  /* Lijn boven de eerste link */
+  color: var(--clr-a);
 }
 
 footer p a:visited {
-  padding: 1em;
-  text-decoration: none;
-  display: block;
-  margin: 0;
-  color: var(--colour-mode-dark-text);
-  border-top: 1px solid var(--footer-border-color); /* Lijn boven de eerste link */
+
+  color: var(--clr-a);
+
 }
 
 
 
 /* Lijn en extra padding toevoegen aan alle links behalve de laatste */
 footer p a:not(:last-child) {
-  border-bottom: 1sem solid var(--footer-border-color); /* Lijn tussen links */
-  padding-right: 1em; /* Extra padding aan de rechterkant (optioneel) */
+  border-bottom: 1sem solid var(--footer-border-color);
+  /* Lijn tussen links */
+  padding-right: 1em;
+  /* Extra padding aan de rechterkant (optioneel) */
 }
 
 /* Lijn onder de laatste link */
@@ -466,38 +410,6 @@ footer section ul button a {
 
 
 /* color mode */
-/* Voeg deze regels toe aan het einde van je CSS */
-
-:root:has([value="dark"]:checked) footer>section:last-of-type {
-  background-color: var(--footer-background-dark);
-  color: var(--footer-text-color-dark);
-}
-
-:root:has([value="dark"]:checked) footer nav a {
-  color: var(--footer-link-color-dark);
-}
-
-:root:has([value="dark"]:checked) footer section ul button {
-  background-color: var(--button-background-dark);
-  color: var(--button-text-color-dark);
-}
-
-:root:has([value="light"]:checked) footer>section:last-of-type {
-  background-color: var(--footer-background);
-  color: var(--footer-text-color);
-}
-
-:root:has([value="light"]:checked) footer nav a {
-  color: var(--footer-link-color);
-}
-
-:root:has([value="light"]:checked) footer section ul button {
-  background-color: var(--button-background);
-  color: var(--button-text-color);
-}
-
-/* colormode */
-
 :root {
   --bg-light: white;
   --bg-dark: black;
@@ -513,18 +425,12 @@ body {
   transition: background-color 0.5s, color 0.5s;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--bg-dark);
-    color: white;
-    /* Aangepaste tekstkleur voor dark mode */
-  }
-}
+
 
 :root:has([value="dark"]:checked) body {
   background-color: var(--bg-dark);
   color: white;
-  /* Aangepaste tekstkleur voor dark mode */
+
 }
 
 :root:has([value="light"]:checked) body {
@@ -538,8 +444,9 @@ body {
   cursor: pointer;
   bottom: 1em;
   left: 1em;
-padding: 0em 0em 0em 0em;
-  border: 1px solid; /* Voeg een border toe om zichtbaar te zijn */
+  padding: 0em 0em 0em 0em;
+  border: 1px solid;
+  /* Voeg een border toe om zichtbaar te zijn */
 }
 
 
@@ -558,3 +465,45 @@ padding: 0em 0em 0em 0em;
 
 
 
+
+
+
+
+
+:root:has([value="light"]:checked) {
+  --clr-a: black;
+  --clr-border-a: black;
+  --clr-p: rgb(0, 0, 0);
+}
+
+:root:has([value="dark"]:checked) {
+  --clr-a: rgb(255, 255, 255);
+  --clr-border-a: rgb(255, 255, 255);
+  --clr-p: white;
+}
+
+
+:root:has([value="system"]:checked) {
+  --clr-a: black;
+  --clr-border-a: black;
+  --clr-p: rgb(0, 0, 0);
+
+}
+
+
+.colour-mode {
+  z-index: 999;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  bottom: 1em;
+  left: 1em;
+  padding: 0em 0em 0em 0em;
+  border: 1px solid;
+  /* Voeg een border toe om zichtbaar te zijn */
+}
+
+body {
+  background-color: var(--bg-root);
+  color: var(--clr-root);
+  transition: background-color 0.5s, color 0.5s;
+}
