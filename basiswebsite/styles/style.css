@@ -78,7 +78,7 @@ a:hover {
 
 :root {
   
-  --heading-1-font-size:2em; 
+  --heading-1-font-size:0.7em; 
   --heading-2-font-size: 1.5em;
   --heading-2-padding: 1em 0em 0em 1em;
 
@@ -92,9 +92,11 @@ a:hover {
   --heading-4-margin: 0.6em 0.6em 0.6em 0.6em;
 }
 
-h1 {
+h1 img {
   font-size: var(--heading-1-font-size);
 }
+
+
 
 h2 {
   font-size: var(--heading-2-font-size);

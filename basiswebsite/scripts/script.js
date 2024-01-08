@@ -1,5 +1,5 @@
 
-
+// carousel function//
 function initializePage() {
     const carouselContainer = document.getElementById('carousel-container');
     const carousel = document.getElementById('carousel');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', initializePage);
 
 
 
-
+// menu function// 
 document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.getElementById('menuBtn');
     const myNav = document.getElementById('myNav');
