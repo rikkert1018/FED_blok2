@@ -7,7 +7,7 @@
   --heading-3-font-size: 2.5em;
   --heading-3-font-weight: bold;
   --heading-3-margin: 0;
-  --heading-3-color: #ffffff;
+  --heading-3-color: #000000;
   --heading-3-margin: 1em 1.5em 0em 0.6em;
 
   --heading-4-font-size: 1em;
@@ -15,6 +15,12 @@
 }
 
 
+body > main > h2:first-of-type {
+  background-color: var(--bg-clr-h2--);
+  padding: 0.5em;
+  margin: 0;
+  border: 0px;
+}
 
 
 h2 {
@@ -22,12 +28,7 @@ h2 {
   padding: var(--heading-2-padding);
 }
 
-h3 {
-  font-size: var(--heading-3-font-size);
-  font-weight: var(--heading-3-font-weight);
-  margin: var(--heading-3-margin);
-  color: var(--heading-3-color);
-}
+
 
 h4 {
   font-size: var(--heading-4-font-size);
@@ -97,7 +98,7 @@ header div img {
 /* buttons */
 :root {
   --bg-clr: grey;
-  --txt-clr: white;  
+  --txt-clr: white; 
 }
 
 .buttons {
@@ -108,13 +109,21 @@ header div img {
 }
 
 
-.filter-button,
-.model-button {
+.filter-button {
   margin: 0.5em;
   padding: 0.5em;
   background-color: var(--bg-clr);
   color: var(--txt-clr);
   border: none;
+  cursor: pointer;
+}
+
+.model-button {
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: var(--clr-bg-filter);
+  border-color: var(--clr-brdr-filter);
+  color: var(--clr-txt-filter);
   cursor: pointer;
 }
 
@@ -130,7 +139,6 @@ header div img {
 :root {
   --main-text-color: #ffffff;
   --link-color: #ffffff;
-  --link-hover-color: #d5001c;
   --link-border-color: #ffffff;
   --link-hover-border-color: #d5001c;
   --background-color: #000;
@@ -168,14 +176,8 @@ header div img {
 }
 
 .models ul li h3 {
-  margin: 0;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: var(--main-text-color);
-  position: absolute;
-  bottom: 0.5em;
-  left: 0.5em;
-  transition: color 0.2s ease-in-out;
+color: var(--clr-h3);
+font-size: 0.8em;
 }
 
 
@@ -192,26 +194,9 @@ header div img {
   background-color: var(--link-color);
 }
 
-.models ul li a:first-of-type:hover {
-  background-color: var(--link-hover-color);
-  color: var(--background-color);
-  border-color: var(--link-hover-border-color);
-}
 
-.models ul li a:nth-of-type(2):hover {
-  color: var(--link-hover-color);
-  border-color: var(--link-hover-border-color);
-}
 
-.models ul li h3 {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 0;
-  color: var(--main-text-color);
-  transition: color 0.2s ease-in-out;
 
-}
 
-.models ul li h3:hover {
-  color: var(--link-hover-color);
-}
+
+

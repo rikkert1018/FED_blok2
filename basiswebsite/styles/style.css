@@ -424,6 +424,11 @@ footer section ul button a {
   --text-color: black;
   --bg-root: white;
   --clr-root: rgb(0, 0, 0);  
+  --clr-h3: rgb(0, 0, 0); 
+  --clr-bg-filter:white; 
+  --clr-brdr-filter:black; 
+  --clr-txt-filter:black; 
+  --bg-clr-h2--: rgb(197, 197, 197); 
 }
 
 :root:has([value="dark"]:checked) {
@@ -433,6 +438,11 @@ footer section ul button a {
   --text-color:white;
   --bg-root: black ;
   --clr-root: white;
+  --clr-h3: rgb(255, 255, 255); 
+  --clr-bg-filter:rgb(0, 0, 0); 
+  --clr-brdr-filter:rgb(255, 255, 255); 
+  --clr-txt-filter:rgb(255, 255, 255); 
+  --bg-clr-h2--: rgb(34, 34, 34);  
 }
 
 
@@ -443,6 +453,11 @@ footer section ul button a {
   --text-color: black; 
 --bg-root: white; 
 --clr-root: black; 
+--clr-h3: rgb(0, 0, 0); 
+--clr-bg-filter:white; 
+--clr-brdr-filter:black; 
+--clr-txt-filter:black; 
+--bg-clr-h2--: rgb(197, 197, 197); 
 }
 
 
