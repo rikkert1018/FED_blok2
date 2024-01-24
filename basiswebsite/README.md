@@ -119,7 +119,6 @@ jake:-
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
   Wat goed ging was de juiste informatie vinden voor mijn website, wat minder goed ging was het gebruiken van SVG's.
 
@@ -191,20 +190,18 @@ Leon: schalen elementen.
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="images/homepage-ruben.png" width="375px" alt="uitomst opdracht 1">
+  <img src="images/screenshot-index.jpg" width="375px" alt="uitomst opdracht 1">
   <img src="images/detailpage-ruben.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
- ik heb geleerd hoe ik aspecten van en website op de juiste manier moet positioneren zodat ze responsive werken, ook heb ik geleerd hoe je bepaalde stijlen van en bestaande website kan vinden en hiervan veel kan leren. Ik heb geleerd wat betere en semantischere manieren zijn van het schrijven van code zoals het gebruiken van roots.
+ ik heb geleerd hoe ik aspecten van en website op de juiste manier moet positioneren zodat ze responsive werken, ook heb ik geleerd hoe je bepaalde stijlen van en bestaande website kan vinden en hiervan veel kan leren. Ik heb geleerd wat betere en semantischere manieren zijn van het schrijven van code zoals het gebruiken van roots. Wat ik nogmeer geleerd heb is het gebruiken van meerdere css paginas om de styling overzichtelijk te houden
 
   <img src="images/homepage-ruben.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Wat ik erg lastig vind/vond is javascript, dit is voor mij nog een aandachtspuntje. De functies die ik hiermee wou bereiken zijn bijna gelukt, alleen het menu op de detailpagina wil niet uitklappen.
-
-  <img src="images/detailpage-ruben.png" width="375px" alt="bummer">
+  Wat ik erg lastig vind/vond is javascript, dit is voor mij nog een aandachtspuntje. De functies die ik hiermee wou bereiken zijn gelukt maar ik heb wel veel hulp ervoor moeten gebruiken.
 </details>
 
 
