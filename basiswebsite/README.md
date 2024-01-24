@@ -38,12 +38,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Je opdracht:
 https://www.porsche.com/netherlands/nl/
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
+   
   <img src="images/screenshot-porsche-pagina.png" width="375px" alt="homepage">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="images/screenshot-porsche-2.png" width="375px" alt="Detail pagina">
+https://www.porsche.com/netherlands/nl/models/718/
+  <img src="images/screenshot-718page.jpg" width="375px" alt="Detail pagina">
  
 </details>
 
@@ -121,6 +121,8 @@ jake:-
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Wat goed ging was de juiste informatie vinden voor mijn website, wat minder goed ging was het gebruiken van SVG's.
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -146,7 +148,7 @@ Leon: schalen elementen.
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is): Ik was ziek deze les, wel heb ik gekeken naar wat mijn website toegankelijker zou kunnen maken, een handige oplopssing zou een Light/Dark/System mode kunnen zijn.  
 
 </details>
 
